@@ -11,7 +11,6 @@
         Este es un proyecto de cuentos infantiles escritos por mi. Cada cuento 
         esta diseñado para ser entretenido y deucativo, con el objetivo de 
         fomentar la imaginacion y el amor por la lectura en los niños
-
     </p>
     <h2>Lista de Cuentos</h2>
     <ul>
@@ -21,16 +20,28 @@
     </ul>
     <p>Creamos rama dev que se desprende de la rama master</p>
     <p>Creamos rama feature/style que se desprende de la rama dev</p>
-
     <search>
         <input type="text" placeholder="Buscar cuentos..."/>
         <button>Buscar</button>
     </search>
-
     <header>
         <h1>Mis Cuentos PISADOS</h1>
     </header>
+    <script>
+        console.log("Este es un mensaje de la consola.")
+        //Creamos un loading para simular la carga de los cuentos
+        document.addEventListener("DOMContentLoaded", function() {
+            const loading = document.createElement("div");
+            loading.textContent = "Cargando cuentos...";
+            document.body.appendChild(loading);
 
+            setTimeout(function () {
+                loading.remove();
+                const cuentosList = document.querySelector("ul");
+                cuentosList.style.display = "block";
+            }, 2000);
+        });
+    </script>
 </body>
 </html>
 
